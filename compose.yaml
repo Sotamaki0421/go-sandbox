@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/go-sandbox/
+    working_dir: /go-sandbox/
+    command: sleep infinity
+    ports:
+      - "8080:8080"

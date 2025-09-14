@@ -1,0 +1,39 @@
+{
+  "name": "go-app",
+  "dockerComposeFile": "../compose.yaml",
+  "service": "app",
+  "workspaceFolder": "/go-sandbox",
+  "postCreateCommand": "/bin/bash .devcontainer/setup.sh",
+  "mounts": [
+    "source=${localWorkspaceFolder}/.git,target=/go-sandbox/.git,type=bind"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "ionutvmi.path-autocomplete",
+        "oderwat.indent-rainbow",
+        "redhat.vscode-yaml",
+        "netcorext.uuid-generator",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.makefile-tools",
+        "humao.rest-client",
+        "mechatroner.rainbow-csv",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "jgclark.vscode-todo-highlight",
+        "alefragnani.Bookmarks",
+        "wmaurer.change-case",
+        "42Crunch.vscode-openapi",
+        "golang.go"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "git.enabled": true,
+        "git.path": null,
+        "git.autoRepositoryDetection": true,
+        "git.scanRepositories": ["/go-sandbox"]
+      }
+    }
+  },
+  "remoteUser": "root"
+}
